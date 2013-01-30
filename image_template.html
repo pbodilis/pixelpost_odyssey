@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title><SITE_TITLE>: <IMAGE_TITLE></title>
+<!-- ATOM FEED -->
+<ATOM_AUTODETECT_LINK>
+<!-- RSS FEED -->
+<RSS_AUTODETECT_LINK>
+<!-- FAVICON -->
+<link rel="shortcut icon" href="templates/odyssey/favicon.ico" />
+<!-- META -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="imagetoolbar" content="false" />
+<meta http-equiv="content-type" name="keywords" content="PhotoBlog,<SITE_TITLE>,<IMAGE_TITLE>,Pixelpost" />
+<meta http-equiv="content-type" name="description" content="<SITE_TITLE>-PhotoBlog: <IMAGE_TITLE>, <IMAGE_NOTES_CLEAN>" />
+
+<!-- CSS -->
+<!-- AJAX RATINGS: include them first so we can overwrite the css with the platform css-->
+<link rel="stylesheet" type="text/css" href="addons/_ajaxratings/ajax_ratings/css/rating-blocks-14px.css" />
+<script type="text/javascript" src="addons/_ajaxratings/ajax_ratings/js/behavior.js"></script>
+<script type="text/javascript" src="addons/_ajaxratings/ajax_ratings/js/rating.js"></script>
+
+<!-- include the odyssey css once the ajax rating stuff is loaded -->
+<link rel="stylesheet" type="text/css" href="templates/odyssey/css/<ODYSSEY_PLATFORM>.css" media="all" />
+<!--[if IE 7]><link rel="stylesheet" type="text/css" href="templates/odyssey/css/ie7.css" /><![endif]-->
+<!--[if IE 8]><link rel="stylesheet" type="text/css" href="templates/odyssey/css/ie8.css" /><![endif]-->
+
+
+<!-- SCRIPTS -->
+<script type="text/javascript" src="templates/odyssey/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="templates/odyssey/js/jquery.mousewheel.js"></script>
+<!-- <script type="text/javascript" src="templates/odyssey/js/mwheelIntent.js"></script> -->
+<script type="text/javascript" src="templates/odyssey/js/jquery.jscrollpane.min.js"></script>
+
+<script type="text/javascript">
+    var imageWidth = <IMAGE_WIDTH>;
+    var imageHeight = <IMAGE_HEIGHT>;
+    var dE = document.documentElement;
+    var defaultValue = 'Comment...'; // You can change this parameter
+    var sendingValue = 'Sending...'; // You can change this parameter
+
+    var imgId     = <IMAGE_ID>;
+    var imgPrevId = <IMAGE_PREVIOUS_ID>;
+    var imgNextId = <IMAGE_NEXT_ID>;
+</script>
+<script type="text/javascript" src="templates/odyssey/js/functions.<ODYSSEY_PLATFORM>.unpack.js"></script>
+
+<script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-3348687-1");
+    pageTracker._initData();
+    pageTracker._trackPageview();
+</script>
+
+</head>
+<!-- PHOTOBLOG BODY -->
+<body class="<ODYSSEY_THEME_COLOR>">
+<!--[if lte IE 6]><script src="templates/odyssey/js/ie6/warning.js"></script><script>window.onload=function(){e('templates/odyssey/js/ie6/')}</script><![endif]-->
+    <div id="header">
+        <h1 id="logo"><a href="index.php" title="Home"><SITE_TITLE></a></h1>
+        <div class="menu txt">
+            <ul>
+                <li><a class="item" href="index.php"                         title="Back to the latest picture"> Latest </a></li>
+                <li><a class="item" href="index.php?x=browse&amp;filter=all" title="Browse pictures">            Browse </a></li>
+                <li><a class="item" href="index.php?x=about"                 title="Details about the author">   About  </a></li>
+            </ul>
+        </div>
+        <div class="menu but social">
+            <a class="menu_but_rss" href="./index.php?x=rss"                                                        title="RSS Feed"></a>
+            <a class="menu_but_tw"  href="http://twitter.com/home?status=<SITE_URL>/index.php?showimage=<IMAGE_ID>" title="Click to share this post on Twitter" target="_blank"></a>
+            <a class="menu_but_fb"  href="http://www.facebook.com/pages/An-Everyday-Lifes-Odyssey/113318748702527"  title="Facebook" target="_blank"></a>
+            <a class="menu_but_fr"  href="http://www.flickr.com/photos/rataki/"                                     title="Flickr"   target="_blank"></a>
+                <!-- <a href="http://plus.google.com" class="menu_but_go" title="Google+" target="_blank"></a> -->
+        </div>
+        <div class="menu but color">
+            <a class="white"      href="#"></a>
+<!--            <a class="light_grey" href="#"></a> -->
+            <a class="dark_grey"  href="#"></a>
+            <a class="black"      href="#"></a>
+        </div>
+        <div class="menu but nav">
+            <a class="prev" href="./index.php?showimage=<IMAGE_PREVIOUS_ID>"><span></span></a>
+            <a class="next" href="./index.php?showimage=<IMAGE_NEXT_ID>"><span></span></a>
+        </div>
+        <div class="menu but tooltip">
+            <a href="#">
+                ?
+            </a>
+            <div class="help">
+                <ul>
+                    <li>Keyboard navigation:
+                        <ul>
+                            <li>press '&larr;' or '&rarr;' to jump to previous or next picture</li>
+                            <li>press 'space' to toggle panel</li>
+                        </ul>
+                    </li>
+                    <li>Use the square buttons to change background color</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="photo_frame">
+        <div id="img">
+            <img src="images/<IMAGE_NAME>" alt="<IMAGE_TITLE>"/>
+            <a href="./index.php?showimage=<IMAGE_PREVIOUS_ID>" class="navLink prev"><span class="navArrow" title="Previous: <IMAGE_PREVIOUS_TITLE>"></span></a>
+            <a href="./index.php?showimage=<IMAGE_NEXT_ID>" class="navLink next"><span class="navArrow" title="Next: <IMAGE_NEXT_TITLE>"></span></a>
+        </div>
+        <div id="photo_infos">
+    	    <h2><IMAGE_TITLE></h2>
+        	<p>&#149; <ODYSSEY_CAPTURE_TIME> &#149;</p>
+        </div>
+    </div>
+    <div id="panel">
+        <div id="panel_handle">
+            <div id="panel_handle_arrowbox">
+                <div id="panel_handle_arrow"></div>
+            </div>
+            <h2>Info,&nbsp;rate&nbsp;&amp;&nbsp;Comments</h2>
+        </div>
+        <div id="panel_scroll">
+            <div id="panel_content">
+<!--                <h4 class="image_title"><IMAGE_TITLE></h4> -->
+                <div class="image_notes"><IMAGE_NOTES></div>
+                <div class="panel_blocks">
+                    <ul>
+                        <li><EXIF_CAMERA_MODEL></li>
+                        <li><EXIF_FOCAL_LENGTH></li>
+                        <li><EXIF_APERTURE></li>
+                        <li><EXIF_EXPOSURE_TIME></li>
+                        <li><EXIF_EXPOSURE_BIAS></li>
+                        <li>ISO <EXIF_ISO></li>
+                        <li><EXIF_FLASH_SUBIFD></li>
+                        <li><EXIF_CAPTURE_DATE></li>
+                    </ul>
+                </div>
+                <div class="panel_blocks"><ODYSSEY_IMAGE_CATEGORIES></div>
+                <div class="panel_blocks extras">
+                    <a href="http://www.coolphotoblogs.com/"><img src="http://www.coolphotoblogs.com/cpb.gif" alt="coolphotoblogs" width="80" height="15" border="0"/></a>
+                    <a href="http://www.coolphotoblogs.com/profile4962"><img src="http://www.coolphotoblogs.com/profile.gif" alt="my profile" width="80" height="15" border="0"/></a>
+                </div>
+                <div class="panel_blocks"><AJAX_RATE stars="10" img_width="14px"></div>
+                <h5>Leave a comment</h5>
+                <div id="commentform">
+                    <form id="form" method="post" action="index.php?x=save_comment" name="commentform" accept-charset="UTF-8">
+                        <div id="vinfos_block">
+                            <div id="name_block">
+                                <label for="name">Name:</label>
+                                <input id="name" class="input_vinfos" type="text" name="name" value="<VINFO_NAME>" />
+                            </div>
+                            <div id="email_block">
+                                <label for="email">Email (not visible):</label>
+                                <input id="email" class="input_vinfos" type="text" name="email" value="<VINFO_EMAIL>" />
+                            </div>
+                            <div id="url_block">
+                                <label for="url">URL (if any):</label>
+                                <input id="url" class="input_vinfos" type="text" name="url" value="<VINFO_URL>" />
+                            </div>
+                        </div>
+                        <textarea class="input_vinfos" id="message" name="message" cols="0" rows="0"></textarea>
+                        <div id="vinfos_save_block">
+                            <input id="save_user_info" type="checkbox" value="set" name="vcookie" checked="checked" />
+                            <label for="save_user_info">Save user info</label>
+                        </div>
+                        <input class="input_submit" type="submit" id="comment_submit" value="Add Comment" />
+                        <div class="clr"></div>
+                        <input type="hidden" name="parent_id" value="<IMAGE_ID>" />
+                        <input type="hidden" name="parent_name" value="<IMAGE_NAME>" />
+                        <input type="hidden" name="withthankyou" value="no" />
+                    </form>
+                </div>
+                <div id="thank_for_comment">Thank you for visiting and taking the time to comment on the picture.</div>
+                <h5><IMAGE_COMMENTS_NUMBER> Comment(s)</h5>
+                <div id="image_comments">
+                    <ODYSSEY_COMMENTS>
+                </div>
+<!--                 <div class="panel_blocks powered_template">Powered by <a href="http://pixelpost.org/" title="Pixelpost">Pixelpost</a> - Template: <a href="http://www.pixelpost.org/extend/templates/odyssey/">Rasul v2.6</a></div> -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title><SITE_TITLE>: About the Author</title>
+<!-- ATOM FEED -->
+<ATOM_AUTODETECT_LINK>
+<!-- RSS FEED -->
+<RSS_AUTODETECT_LINK>
+<!-- FAVICON -->
+<link rel="shortcut icon" href="templates/odyssey/favicon.ico" />
+<!-- META -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="templates/odyssey/css/<ODYSSEY_PLATFORM>.css" media="all" />
+<!--[if IE 7]><link rel="stylesheet" type="text/css" href="templates/odyssey/css/ie7.css" /><![endif]-->
+<!-- SCRIPTS -->
+<script type="text/javascript" src="templates/odyssey/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="templates/odyssey/js/functions.<ODYSSEY_PLATFORM>.unpack.js"></script>
+<script type="text/javascript">
+$(function() {
+    $('.links_commenters div').hide();
+    $('.links_commenters h2').click(function () {
+        if ($(this).hasClass('open')) {
+            $('.links_commenters div').slideUp(300);
+        } else {
+            $('.links_commenters h2').removeClass('open');
+            $('.links_commenters div').slideUp(300);
+            $(this).next().slideToggle(300);
+        }
+        $(this).toggleClass('open');
+        return false;
+    });
+});
+</script>
+<script type="text/javascript" src="templates/odyssey/js/contact_form.js"></script>
+
+<script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-3348687-1");
+    pageTracker._initData();
+    pageTracker._trackPageview();
+</script>
+
+</head>
+<!-- PHOTOBLOG BODY -->
+<body class="<ODYSSEY_THEME_COLOR>">
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+<!--[if lte IE 6]><script src="templates/odyssey/js/ie6/warning.js"></script><script>window.onload=function(){e('templates/odyssey/js/ie6/')}</script><![endif]-->
+    <div id="header">
+        <h1 id="logo"><a href="index.php" title="Home"><SITE_TITLE></a></h1>
+        <div class="menu txt">
+            <ul>
+                <li><a class="item" href="index.php"                         title="Back to the latest picture"> Latest </a></li>
+                <li><a class="item" href="index.php?x=browse&amp;filter=all" title="Browse pictures">            Browse </a></li>
+                <li><a class="item" href="index.php?x=about"                 title="Details about the author">   About  </a></li>
+            </ul>
+        </div>
+        <div class="menu but social">
+            <a class="menu_but_rss" href="./index.php?x=rss"                                                        title="RSS Feed"></a>
+            <a class="menu_but_tw"  href="http://twitter.com/home?status=<SITE_URL>/index.php"                      title="Click to share this post on Twitter" target="_blank"></a>
+            <a class="menu_but_fb"  href="http://www.facebook.com/pages/An-Everyday-Lifes-Odyssey/113318748702527"  title="Facebook" target="_blank"></a>
+            <a class="menu_but_fr"  href="http://www.flickr.com/photos/rataki/"                                     title="Flickr"   target="_blank"></a>
+                <!-- <a href="http://plus.google.com" class="menu_but_go" title="Google+" target="_blank"></a> -->
+        </div>
+        <div class="menu but color">
+            <a class="white"      href="#"></a>
+<!--            <a class="light_grey" href="#"></a> -->
+            <a class="dark_grey"  href="#"></a>
+            <a class="black"      href="#"></a>
+        </div>
+    </div>
+    <div id="wrapper">
+        <div id="photo_about">
+            <div id="about_content">
+                <h1>About</h1>
+                <div id="img"></div>
+                <h2>Who am I?</h2>
+                <p>Hi there,<br />
+                    My name is Pierre Bodilis. I work as an IT Engineer in telecommunication in Paris, France. I lived for a while in the Meadowlands, very close
+                    to NYC, which may explain the numerous pictures from this city. I love to travel (oh well, who doesn't?). I'm always with a camera on my shoulder, "just in case".
+                    I fell into photography thanks to my <a href="./index.php?showimage=472#">former flatmate</a> somewhere in September 2007. At first, I tried to comply with
+                    a publication rate of one picture a day, but this was way too demanding. After a year, I stepped down to a picture every 2 or 3 days,
+                    and I have been trying to keep up with this rate since.
+                </p>
+                <p>
+                    All the pictures published on this blog are under by-nc-sa creative common. It is forbidden to use them without my authorization.
+                    If by any chance, you recognize yourself on one of those pictures, and you want me to remove it, just send me an email using the contact form in this page, and I'll do it straightaway.
+                </p>
+                <p>
+	                Did I tell you I'm a big fan of Futurama?
+                </p>
+
+                <h2>What about this site?</h2>
+                <p>This photoblog is powered by <a href="http://www.pixelpost.org/">pixelpost</a>.
+                The design is inspired by the work of <a href="http://gahnevesht.name/">Rasul Bahmanziari</a> and
+                <a href="http://www.j-roumagnac.net/">Julien Roumagnac</a>. I wrote it to support CSS3 and take advantage of modern browser capabilities with
+                the help of <a href="http://nimwendil.net/">a good friend</a>.
+                Social &amp; rss icons created
+                by <a href="http://www.onextrapixel.com/2012/02/28/freebies-black-white-minimal-social-icons-pack/">Helen Gizi</a>.</p>
+                <p>Have you tried to type in "zoidberg" while watching an image? It'll work anywhere on the site by the way.</p>
+
+                <div id="cols">
+                <div class="col1">
+                    <h2>Cameras &amp; lenses</h2>
+                    <ul class="equipment">
+                        <li>Canon EOS 7D
+                            <ul>
+                                <li>Canon EF 50mm f1.8</li>
+                                <li>Canon EF-S 17-55mm f2.8 IS USM</li>
+                                <li>Canon EF 70-200mm f4 L IS USM</li>
+                                <li>UV and polarizing filters</li>
+                            </ul>
+                        </li>
+                        <li>Fujifilm X100</li>
+                        <li>My dad's good old film camera Pentax ME Super
+                            <ul>
+                                <li>35mm f2.8</li>
+                                <li>50-150mm f4</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h2>Exhibits</h2>
+                    <ul>
+                        <li>May 2011 – Paris, <a href="http://www.facebook.com/pages/Le-Couvent/160284440650065">Le couvent</a>: Seascapes &amp; cities by night</li>
+                        <li>May 2011 – Morlaix, <a href="http://www.facebook.com/people/Kashgar-Cie-Morlaix/100000894425774">Kashgar</a>: 4 days in Istanbul</li>
+                        <li>June 2011 – Paris, <a href="http://www.facebook.com/pages/Bar-le-Br%C3%A9guet/113618118729881">Le couvent</a>: 4 days in Istanbul</li>
+                        <li>June 2011 – Trédrez-Locquémeau, <a href="http://www.cafetheodore.fr/">Café Théodore</a>: 4 days in Istanbul</li>
+                    </ul>
+                    <h2>Featured blog</h2>
+                    <ul>
+                        <li>A dozen of times "noteworthy" on <a href="http://www.photofriday.com/">Photofriday</a></li>
+                        <li>Featured member on <a href="http://www.coolphotoblogs.com/?do=profile&amp;id=4962">coolphotoblogs.com</a></li>
+                    </ul>
+                </div>
+                <div class="col2">
+                    <h2>Social networks</h2>
+                    <ul class="social">
+                    	<li><div class="fb-like-box"
+                                data-href="http://www.facebook.com/pages/An-Everyday-Lifes-Odyssey/113318748702527"
+                                data-width="300"
+                                data-colorscheme="dark"
+                                data-show-faces="false"
+                                data-stream="false"
+                                data-header="true"></div></li>
+                        <li>
+                            <a href="https://twitter.com/kerlu" class="twitter-follow-button" data-show-count="false">Follow me on twitter!</a>
+                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                        </li>
+                        <li><a href="http://www.flickr.com/photos/rataki/">Flickr</a></li>
+                        <li><a href="http://www.coolphotoblogs.com/?do=profile&amp;id=4962">     <img src="http://www.coolphotoblogs.com/cool_p.gif" alt='my profile' width='80' height='15' border='0'/></a></li>
+                        <li><a href="http://photos.vfxy.com/members/rataki">                     <img src="http://photos.vfxy.com/images/vfxy_photos.jpg" alt='VFXY Photos' title='VFXY Photos' border='0'/></a></li>
+                        <li><a href="http://www.photoblog-community.com/LinkDetails.php?ID=4687"><img src="http://www.photoblog-community.com/Images/photo-links2.png" border="0" alt="photoblog-community" title="photoblog-community"/></a></li>
+                    </ul>
+                                    <h2>Blog Links</h2>
+                <div class="desc">
+                    <ul>
+                        <li><a href="http://www.flickr.com/photos/clemwashma">Clémence's flickr</a></li>
+                        <li><a href="http://nimwendil.net/">Patterns in the Ivy</a></li>
+                        <li><a href="http://apochromatic.eu/">ApoChromatic</a></li>
+                        <li><a href="http://a-tension.eu/">A-tension</a></li>
+                        <li><a href="http://thomas.quinot.org/blog/">Un soir de pluie et de vent</a></li>
+                        <li><a href="http://lasoeurkaramazov.net/">Mitternacht</a></li>
+                    </ul>
+                </div>
+
+                </div>
+                <div class="clr"></div>
+                </div>
+
+                <h2>Contact</h2>
+                <p>Do we need to talk?<br />
+                You can just write me a comment on one of the photos if this is the matter of your question,
+                or you can write me directly via the contact form below.</p>
+                <div id="contact">
+                    <div class="container">
+                        <div class="messages">
+                            <span id="javascriptreq">
+                            You must have javascript enabled to use this contact form.<br/>
+                            Javascript is currently disabled in your browser.
+                            </span>
+                            <CONTACT_FORM_MESSAGES>
+                        </div>
+                        <form method="post" id="contact_form" action="index.php?x=about#contact">
+                            <p>
+                                <label>Name:</label>
+                                <input id="name" class="vinfos" type="text" name="contact_form_name" value="<CONTACT_FORM_NAME>" />
+                            </p>
+                            <p>
+                                <label>Email:</label>
+                                <input id="email" class="vinfos" type="text" name="contact_form_email" value="<CONTACT_FORM_EMAIL>" />
+                            </p>
+                            <p>
+                                <label class="message">Message:</label>
+                                <textarea id="message" name="contact_form_message" cols="0" rows="0"><CONTACT_FORM_MESSAGE></textarea>
+                            </p>
+                            <p class="submit">
+                                <CONTACT_FORM_SUBMIT_BUTTON>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+                <h2>Licensing</h2>
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
+                   <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" />
+                </a>
+	            <p>Photos on <SITE_TITLE> by <a xmlns:cc="http://creativecommons.org/ns#" href="rataki.eu" rel="cc:attributionURL">Pierre Bodilis</a> are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-Noncommercial-Share Alike 3.0 Unported License</a>.</p>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

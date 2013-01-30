@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title><SITE_TITLE> - Archives</title>
+<!-- ATOM FEED -->
+<ATOM_AUTODETECT_LINK>
+<!-- RSS FEED -->
+<RSS_AUTODETECT_LINK>
+<!-- FAVICON -->
+<link rel="shortcut icon" href="templates/odyssey/favicon.ico" />
+<!-- META -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="imagetoolbar" content="false" />
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="templates/odyssey/css/<ODYSSEY_PLATFORM>.css" media="all" />
+<!--[if IE 7]><link rel="stylesheet" type="text/css" href="templates/odyssey/css/ie7.css" /><![endif]-->
+<!-- SCRIPTS -->
+<script type="text/javascript">
+</script>
+<script type="text/javascript" src="templates/odyssey/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+$(function() {
+    var fromSearch = new RegExp('(category)|(archivedate)');
+    var ret = document.location.href.match(fromSearch);
+    var menu = 'ul.accordion>li.'.concat(ret == null ? 'general' : ret[0]);
+    $(menu.concat('>h3')).toggleClass('open');
+    $(menu.concat(' .content')).css('display', 'block');
+    
+    $('ul.accordion>li>h3').click(function () {
+        if ($(this).hasClass('open')) {
+            $('.content').slideUp(300);
+        } else {
+            $('ul.accordion>li>h3').removeClass('open');
+            $('.content').slideUp(300);
+            $(this).next().slideToggle(300);
+        }
+        $(this).toggleClass('open');
+        return false;
+    });
+});
+</script>
+<script type="text/javascript" src="templates/odyssey/js/functions.unpack.js"></script>
+
+<script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-3348687-1");
+    pageTracker._initData();
+    pageTracker._trackPageview();
+</script>
+
+</head>
+<!-- PHOTOBLOG BODY -->
+<body class="<ODYSSEY_THEME_COLOR>">
+<!--[if lte IE 6]><script src="templates/odyssey/js/ie6/warning.js"></script><script>window.onload=function(){e('templates/odyssey/js/ie6/')}</script><![endif]-->
+    <div id="header">
+        <h1 id="logo"><a href="index.php" title="Home"><SITE_TITLE></a></h1>
+        <div class="menu txt">
+            <ul>
+                <li><a class="item" href="index.php"                         title="Back to the latest picture"> Latest </a></li>
+                <li><a class="item" href="index.php?x=browse&amp;filter=all" title="Browse pictures">            Browse </a></li>
+                <li><a class="item" href="index.php?x=about"                 title="Details about the author">   About  </a></li>
+            </ul>
+        </div>
+        <div class="menu but social">
+            <a class="menu_but_rss" href="./index.php?x=rss"                                                        title="RSS Feed"></a>
+            <a class="menu_but_tw"  href="http://twitter.com/home?status=<SITE_URL>/index.php"                      title="Click to share this post on Twitter" target="_blank"></a>
+            <a class="menu_but_fb"  href="http://www.facebook.com/pages/An-Everyday-Lifes-Odyssey/113318748702527"  title="Facebook" target="_blank"></a>
+            <a class="menu_but_fr"  href="http://www.flickr.com/photos/rataki/"                                     title="Flickr"   target="_blank"></a>
+                <!-- <a href="http://plus.google.com" class="menu_but_go" title="Google+" target="_blank"></a> -->
+        </div>
+        <div class="menu but color">
+            <a class="white"      href="#"></a>
+<!--            <a class="light_grey" href="#"></a> -->
+            <a class="dark_grey"  href="#"></a>
+            <a class="black"      href="#"></a>
+        </div>
+    </div>
+    <div id="archives_block">
+        <ul class="accordion">
+            <li class="general">
+                <h3>General</h3>
+                <div class="content">
+                    <ul>
+                        <li><a href="index.php?x=browse&amp;filter=all"             title="All (<SITE_PHOTONUMBER> Photos)"> All&nbsp;(<SITE_PHOTONUMBER>) </a></li>
+                        <li><a href="index.php?x=browse&amp;filter=most_commented"  title="Most commented pictures">         Most Commented                </a></li>
+                        <li><a href="index.php?x=browse&amp;filter=least_commented" title="Least commented pictures">        Least Commented               </a></li>
+                        <li><a href="index.php?x=browse&amp;filter=top_rated"       title="Top rated pictures">              Top Rated                     </a></li>
+                        <li><a href="index.php?x=browse&amp;filter=worst_rated"     title="Worst rated pictures">            Worst Rated                   </a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="category">
+                <h3>By Category</h3>
+                <div class="content">
+                    <CATEGORY_LINKS_AS_LIST_PAGED>
+                </div>
+            </li>
+            <li class="archivedate">
+                <h3>By Date</h3>
+                <div class="content">
+                    <BROWSE_MONTHLY_ARCHIVE_AS_LINK_PAGED>
+                </div>
+            </li>
+        </ul>
+        <div id="copyright">All images &copy; Pierre Bodilis</div>
+    </div>
+    <div id="photolist_block">
+        <ul><ODYSSEY_THUMBNAILS></ul>
+        <div class="clr"></div>
+    </div>
+    <div class="clr"></div>
+
+</body>
+</html>

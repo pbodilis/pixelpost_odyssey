@@ -1,0 +1,23 @@
+﻿#logo{padding:1px 130px 0 6px;}
+#about_content .links_commenters h2{padding:2px 40px 2px 10px;position:relative;}
+#archives_accordion h3{line-height:15px;position:relative;}
+#archives_block ul li div ul li a{height:13px;}
+#contact .container{padding:0 0 8px 0;}
+#contact form p{padding-top:2px;}
+#contact form p.submit{padding-top:5px;}
+
+
+#panel_handle h2 {
+    height: 190px;
+    margin-top: 10px;
+    margin-left: 5px;
+    writing-mode: tb-rl;
+    filter: flipv fliph;
+}
+
+#commentform #email_block {
+    margin-left: 1%;
+}
+#commentform #url_block {
+    margin-left: 1%;
+}

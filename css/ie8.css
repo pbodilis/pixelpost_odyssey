@@ -1,0 +1,7 @@
+﻿#panel_handle h2 {
+    height: 190px;
+    margin-top: 10px;
+    margin-left: 5px;
+    writing-mode: tb-rl;
+    filter: flipv fliph;
+}
